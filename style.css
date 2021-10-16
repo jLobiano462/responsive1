@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Varela+Round&display=swap');
+
+
+:root{
+  --clr-nav: #0a021f;
+  --clr-body:#18052e;
+
+
+
+  --ff-logo:'Varela Round',sans-serif;
+  --ff-body:'Roboto',sans-serif;
+
+
+  --fcolor:#c5a9de;
+
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+
+
+
+body,
+h1,
+h2,
+h3,
+p{
+  margin: 0;
+}
+
+a{
+  color:red;
+}
+
+
+body{
+  font-size: 1.1rem;
+  line-height: 1.45;
+  background:var(--clr-body);
+  font-family: var(--ff-body);
+  color:var(--fcolor);
+}
+
+section{
+  padding:0 1em;
+
+}
+
+nav{
+  background: var(--clr-nav);
+  border-bottom: 1px solid var(--fcolor);
+
+
+}
+
+.navbar,
+.container{
+  min-width: 90%;
+  max-width: 97rem;
+  margin: 0 auto;
+}
+
+.img-banner{
+  padding: 0;
+  text-align: center;
+
+}
+
+.banner{
+  min-width: 95%;
+  max-width: 97%;
+  margin: 0 auto;
+  margin-top: 1em;
+  border-radius: 5px;
+  border:2px solid var(--fcolor);
+
+}
+
+.banner img,
+.container img{
+  width: 100%;
+
+
+
+}
+
+.toggle{
+  border: none;
+  font-size: 2rem;
+  background: transparent;
+  color:var(--fcolor);
+}
+
+.container img{
+  border-radius: 5px;
+  margin-top: 1em;
+  border: 2px solid var(--fcolor);
+}
+
+.links{
+  min-width: 55%;
+  max-width: 75%;
+  text-align: left;
+  margin: 0 auto;
+
+}
+
+
+
+.container{
+  padding:2.5em 0;
+
+
+}
+
+
+
+.pop{
+  top:0;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  height: 100vh;
+  background: var(--clr-nav);
+  z-index: 1;
+  text-align: center;
+  display:none;
+
+}
+
+.pop a, .desktop a{
+  color:var(--fcolor);
+  text-decoration: none;
+}
+
+
+
+
+
+.nav-links{
+  list-style: none;
+  padding-left:0;
+}
+
+
+
+.navlinks li{
+  font-size: 1.5rem;
+  margin-top: 1em;
+}
+
+.container-nav{
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5em 0.55em;
+
+}
+
+.desktop{
+  display: none;
+
+}
+
+.desktop ul{
+  list-style: none;
+}
+
+.titles{
+  font-family: var(--ff-logo);
+  text-align: center;
+  text-shadow: 0 1px 5px pink;
+}
+
+.center{
+  text-align: center;
+}
+
+.projects{
+  margin: 1em 0;
+}
+
+.split{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.content{
+  margin: 1em 0;
+  border: 2px solid pink;
+  border-radius: 5px;
+  padding: 1em;
+  background: var(--clr-nav);
+
+}
+.popup{
+  text-align: left;
+}
+
+.show{
+  display: block;
+}
+
+
+@media (min-width:50rem){
+  body{
+    font-size: 1.5rem;
+  }
+  .toggle{
+    display: none;
+  }
+
+
+
+  .img-banner{
+    border:none;
+  }
+
+  .nav-links li{
+    margin-left: 1em;
+  }
+
+  .desktop{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .projects{
+    padding: 0;
+  }
+
+  .container-proj{
+    min-width: 100%;
+    padding:0;
+
+  }
+
+  .split{
+    flex-direction: row;
+    font-size: 1.2rem;
+    justify-content: space-around;
+
+
+
+  }
+
+  .split > *{
+    flex-basis: 31%;
+  }
+
+  .content{
+    border: 2px solid pink;
+    border-radius: 5px;
+    padding: 1em;
+    background: var(--clr-nav);
+  }
+
+  .content:hover{
+    flex-basis:32%;
+  }
+
+
+}
+
+
+@keyframes lights{
+  from{
+
+  }
+}
