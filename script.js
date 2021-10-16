@@ -1,8 +1,8 @@
 const toggleMenu = document.getElementById('toggle')
 const projectImages = [
-  'images/freq_gen.png',
-  'images/quantum_numbers.png',
-  'images/variance_easy.png'
+  'images/freq_gen.PNG',
+  'images/quantum_numbers.PNG',
+  'images/variance_easy.PNG'
 ]
 
 const projectToggler = document.querySelectorAll('input[name = "project-image"]')
