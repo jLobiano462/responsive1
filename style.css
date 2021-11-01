@@ -129,7 +129,7 @@ nav{
   background: var(--clr-nav);
   z-index: 1;
   text-align: center;
-  display:none;
+  transform: translateX(-100%);
 
 }
 
@@ -152,8 +152,12 @@ nav{
 .navlinks li{
   font-size: 1.5rem;
   margin-top: 1em;
+  cursor: pointer;
 }
 
+.exit{
+  cursor: pointer;
+}
 .container-nav{
   display: flex;
   justify-content: space-between;
@@ -203,13 +207,23 @@ nav{
 }
 
 .show{
-  display: block;
+  animation: slide-down;
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+
+.hide{
+  animation:slide-up;
+  animation-duration: 0.75s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
 }
 
 
 @media (min-width:50rem){
   body{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .toggle{
     display: none;
@@ -223,6 +237,7 @@ nav{
 
   .nav-links li{
     margin-left: 1em;
+
   }
 
   .desktop{
@@ -243,7 +258,9 @@ nav{
   .split{
     flex-direction: row;
     font-size: 1.2rem;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding:.55em;
 
 
 
@@ -268,8 +285,22 @@ nav{
 }
 
 
-@keyframes lights{
+@keyframes slide-down{
   from{
+    transform: translateY(-100%);
+  }
 
+  to{
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up{
+  from{
+    transform: translateY(0);
+  }
+
+  to{
+    transform: translateY(-100%);
   }
 }
